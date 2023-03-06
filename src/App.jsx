@@ -16,11 +16,11 @@ function App() {
 
   //Handles New Video Click
   const newMainVideo = (id) => {
-    const newVideo = videosData.filter(v => v.id === id);
-    const newComments = videosDetailsData.filter(v => v.id === id);
-    setVideo(newVideo[0])
-    setVideoLibrary(videosData.filter(v => v.id !== id))
-    setVideoComment(newComments[0])
+    const newVideo = videosData.find(v => v.id === id);
+    const newComments = videosDetailsData.find(v => v.id === id);
+    setVideo(newVideo);
+    setVideoLibrary(videosData.filter(v => v.id !== id));
+    setVideoComment(newComments);
   };
   //useEffect is call back hook for when video state changes for scroll top animation
   useEffect(() => {
@@ -28,7 +28,7 @@ function App() {
       const currentPosition = window.pageYOffset;
       if (currentPosition > 0) {
         window.requestAnimationFrame(scrollToTop);
-        window.scrollTo(0, currentPosition - currentPosition / 10);
+        window.scrollTo(0, currentPosition - currentPosition / 25);
       }
   };
   scrollToTop();

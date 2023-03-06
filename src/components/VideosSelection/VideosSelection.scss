@@ -12,8 +12,10 @@
     &__title{
         color:#AFAFAF;
         margin-bottom: 0.75rem;
+        font-size: .8125rem;
         @include desktop {
             margin-top: 2rem;
+            font-size: .875rem;
         }
     }
 
