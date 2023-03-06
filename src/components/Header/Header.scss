@@ -1,0 +1,102 @@
+@use "../../styles/partials/resets";
+@use '../../styles/partials/mixins' as *;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding:0 1rem;
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1rem 0;
+        padding:0 2.2rem;
+    }
+    @include desktop{
+   
+        max-width: 63.75rem;
+        margin: 1rem auto;
+        padding:0 0;
+    }
+    &__logo{
+        max-height: 1.75rem;
+        margin: 1rem 0rem;
+        @include tablet{
+            margin: 0.75rem 0rem;
+            height: 1.75rem;
+        }
+    }
+
+    &__upload-btn{
+        width: 100%;
+        order: 1;
+        height: 3.25rem;
+        background-color: #0095FF;
+        border: #0095FF;
+        border-radius: 0.25rem;
+        color: #FFF;
+        background-image: url("../../assets/images/icons/upload.svg");
+        background-repeat: no-repeat;
+        background-position: left 0.75rem center;
+        @include tablet{
+            width:35%;
+            order: 0;
+        }
+        @include desktop{
+            width:26%;
+            order: 0;
+            margin-left: 1rem;
+        }
+    }
+
+    &__user{
+        order: 0;
+        height:3rem;
+        width:3rem;
+        background-image: url("../../assets/images/avatar/Mohan-muruge.jpg");
+        background-size: cover;
+        border-radius: 3rem;
+        @include tablet{
+            order: 1;
+        }
+        @include desktop{
+            margin-left: 2.2rem;
+        }
+    
+    }
+
+    &__search{
+        background-image: url("../../assets//images/icons/search.svg");
+        background-repeat: no-repeat;
+        background-position: left 1rem center;
+        width:80%;
+        font-size: 1rem;
+        padding: 1rem 1rem 1rem 2.75rem;
+        border-radius: 0.25rem;
+        border: 0.1rem solid #E1E1E1;
+        background-color: #FAFAFA;
+        margin-bottom: 1.2rem;
+        color: black;
+        @include tablet{
+            width:50%;
+            margin-bottom: 0;
+        }
+        @include desktop{
+            width: 36%;
+            order: 0;
+        }
+    }
+
+    &__actions{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include tablet{
+            width: 65%;
+        }
+        @include desktop{
+            justify-content: flex-end;
+        }
+    }
+
+
+}
