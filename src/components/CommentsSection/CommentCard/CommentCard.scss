@@ -1,0 +1,57 @@
+@use "../../../styles/partials/resets";
+@use '../../../styles/partials/mixins' as *;
+
+.comment {
+    display: flex;
+    padding: 1rem 0rem;
+    border-top: 2px solid #E1E1E1;
+
+    &__user-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 0.75rem;
+       
+    }
+    @include tablet{
+        display: flex;
+        flex-direction: row;
+        padding: 1.75rem 0rem;
+    }
+
+    &__avatar{
+        min-width: 3rem;
+        max-height: 3rem;
+        background-color: #E1E1E1;
+        border-radius: 2.5rem;
+        margin-right: 1.3rem;
+        @include tablet{
+            margin-right:2.2rem;
+        }
+    }
+    &__user-name{
+        font-weight: 700;
+    }
+    &__description{
+        line-height: 1.125rem;
+        @include tablet{
+            line-height: 1.375rem;
+        }
+    }
+    &__date{
+        color:#AFAFAF;
+    }
+    @include desktop {
+        padding: 2rem 1.25rem 2rem 0rem;
+    }
+    &__info{
+        width: 100%;
+    }
+}
+
+.comment--first{
+    border-bottom: 2px solid #E1E1E1;
+    @include desktop{
+        border-bottom: 0;
+    }
+}
