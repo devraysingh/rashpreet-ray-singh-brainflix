@@ -23,7 +23,7 @@
     flex-direction: column;
     justify-content: space-between; 
     @include tablet {
-        max-width: 13.75rem;
+        max-width: 11rem;
     }
     @include desktop{
         line-height: 1.25rem;
@@ -43,14 +43,22 @@
     text-overflow: ellipsis;
     word-wrap: break-word;
     font-weight: 700;
-    margin: 0; 
+    margin: 0;
+    font-size: .8125rem;
+    line-height: 1.125rem;
     @include desktop{
         line-height: 1.25rem;
-        font-size: 0.8rem;
+        font-size: .875rem;
     }
   }
 
   &__author {
     margin: 0;
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    @include desktop{
+      line-height: 1.25rem;
+      font-size: .875rem;
+  }
   }
 }
