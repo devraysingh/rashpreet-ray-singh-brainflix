@@ -1,0 +1,56 @@
+
+@use "../../styles/partials/resets";
+@use '../../styles/partials/mixins' as *;
+
+
+.video-card {
+  display: flex;
+  padding: 0.5rem 0rem;
+  font-size: 1rem;
+
+  &__image {
+    min-width: 8rem;
+    max-width: 8rem;
+    height: 4.5rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+
+  &__info {
+    margin-left: 1.5rem;
+    max-width: 18.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    @include tablet {
+        max-width: 13.75rem;
+    }
+    @include desktop{
+        line-height: 1.25rem;
+        font-size: 0.8rem;
+        max-width: 16.9rem;
+        margin-left: 1rem;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    font-weight: 700;
+    margin: 0; 
+    @include desktop{
+        line-height: 1.25rem;
+        font-size: 0.8rem;
+    }
+  }
+
+  &__author {
+    margin: 0;
+  }
+}
