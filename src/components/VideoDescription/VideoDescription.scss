@@ -1,7 +1,7 @@
 @use "../../styles/partials/resets";
 @use '../../styles/partials/mixins' as *;
 
-
+//VideoDescription SASS for the VideoDescription.jsx
 .video-info {
     padding: 2rem 1rem;
     @include tablet {
@@ -18,9 +18,8 @@
         justify-content: space-between;
         margin-top: 1rem;
         @include tablet{
-            border-top: 0px;
-            margin-top: 0rem;
- 
+            border-top: 0;
+            margin-top: 0;
         }
         @include desktop {
             padding: 1rem 2rem 1rem 0rem;
@@ -30,7 +29,7 @@
         width: 50%;
         @include tablet {
             display: flex;
-            align-items: end;
+            align-items: flex-end;
     
         }
     }
@@ -69,7 +68,6 @@
         @include tablet {
             padding-right: 1rem;
             padding-bottom: 0rem;
-   
         }
         display: flex;
         align-items: center;
@@ -87,14 +85,9 @@
         }
         @include desktop {
             padding: 1rem 1rem 3rem 0rem;
-            
         }
     }
-
-
     &__comments{
         font-weight: 700;
     }
-  
-
 }

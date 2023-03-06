@@ -2,14 +2,14 @@
 @use '../../../styles/partials/mixins' as *;
 @use '../../../styles/partials/variables' as *;
 
-
+//Comment FORM SASS
 .comment-form {
     margin-bottom: 1.5rem;
     width: 90%;
     @include tablet{
         display: flex;
         flex-direction: row;
-        align-items: end;
+        align-items: flex-end;
         justify-content: space-between;
         margin-left: 0.75rem;
         width: 95%;
@@ -58,6 +58,9 @@
         }
         @include desktop{
             width: 31%;
+        }
+        &:hover {
+            background-color: #0065AD;
         }
     }
 

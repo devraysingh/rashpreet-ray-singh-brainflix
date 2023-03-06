@@ -1,8 +1,8 @@
 import "./CommentForm.scss"
 
 
-const CommentForm = (props) =>  {
-
+const CommentForm = () =>  {
+    //Comment Form Component
     return (
         <div className="comment-form__container">
             <div className="comment-form__avatar"></div>

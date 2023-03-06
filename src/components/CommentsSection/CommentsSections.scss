@@ -1,8 +1,7 @@
 @use "../../styles/partials/resets";
 @use '../../styles/partials/mixins' as *;
-
+//Comments Section
 .comments-section{
-
     padding: 0 1rem;
     @include tablet {
         padding: 0 2.25rem;

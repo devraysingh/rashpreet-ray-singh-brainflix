@@ -1,5 +1,5 @@
 @use 'variables' as *;
-
+//Mixins SASS Partials
 @mixin tablet {
     @media screen and (min-width: $tablet-breakpoint) {
         @content;

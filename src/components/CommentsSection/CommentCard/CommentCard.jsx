@@ -1,7 +1,8 @@
 import "./CommentCard.scss"
 
 const CommentCard = (props) => {
-    const timeStamp = new Date(props.timestamp).toLocaleDateString('en-us')
+    const timeStamp = new Date(props.timestamp).toLocaleDateString('en-us');
+    //Comment Card Component
     return (
         <div key={props.id} className={props.className}>
             <div className="comment__avatar"></div>

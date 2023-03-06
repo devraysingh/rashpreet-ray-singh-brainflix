@@ -9,39 +9,36 @@ import CommentsSection from './components/CommentsSection/CommentsSections';
 import { useState, useEffect } from 'react';
 
 function App() {
-
+  //App State 
   const [video, setVideo] = useState(videosData[0]); 
   const [videoComment, setVideoComment] = useState(videosDetailsData[0]); 
   const [videoLibrary, setVideoLibrary] = useState(videosData);
 
+  //Handles New Video Click
   const newMainVideo = (id) => {
-
     const newVideo = videosData.filter(v => v.id === id);
     const newComments = videosDetailsData.filter(v => v.id === id);
     setVideo(newVideo[0])
     setVideoLibrary(videosData.filter(v => v.id !== id))
     setVideoComment(newComments[0])
-
-
   };
-
+  //useEffect is call back hook for when video state changes for scroll top animation
   useEffect(() => {
-  const scrollToTop = () => {
-    const currentPosition = window.pageYOffset;
-    if (currentPosition > 0) {
-      window.requestAnimationFrame(scrollToTop);
-      window.scrollTo(0, currentPosition - currentPosition / 10);
-    }
+    const scrollToTop = () => {
+      const currentPosition = window.pageYOffset;
+      if (currentPosition > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, currentPosition - currentPosition / 10);
+      }
   };
   scrollToTop();
   }, [video]);
 
-
+  //React re-rendering the app 
   return (
     <div className="App">
-  
+        {/* App Child Components for the App */}
         <Header />
-     
         <Video data={video} />
         <div className="row">
           <div className="desktop">

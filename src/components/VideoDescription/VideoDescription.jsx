@@ -3,9 +3,8 @@ import views from "../../assets/images/icons/views.svg"
 import likes from "../../assets/images/icons/likes.svg"
 
 const VideoDescription = (props) => {
-
-    let videoDate = new Date(props.data.timestamp);
-
+    //VideoDescription Component 
+    let videoDate = new Date(props.data.timestamp);    
     return (
         <div className="video-info">
             <h1 className="video-info__title">{props.data.title}</h1>

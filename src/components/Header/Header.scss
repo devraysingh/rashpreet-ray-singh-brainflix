@@ -1,6 +1,6 @@
 @use "../../styles/partials/resets";
 @use '../../styles/partials/mixins' as *;
-
+//Header SASS
 .header {
     display: flex;
     flex-direction: column;
@@ -45,6 +45,9 @@
             width:26%;
             order: 0;
             margin-left: 1rem;
+        }
+        &:hover {
+            background-color: #0065AD;
         }
     }
 
