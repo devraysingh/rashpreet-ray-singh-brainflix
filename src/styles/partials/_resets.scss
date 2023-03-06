@@ -1,0 +1,29 @@
+@use 'fonts' as *;
+@use 'mixins' as *;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+body {
+    font-size: 0.8125rem;
+    margin: 0;
+    font-family: "AvenirNextLTPro";
+    @include tablet{
+        font-size: 0.875rem;
+    }
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-family: "AvenirNextLTPro";
+    @include tablet{
+        font-size: 2.0625rem;
+    }
+}
+
+p {
+    margin: 0;
+}

@@ -1,0 +1,22 @@
+@use "./styles/partials/resets";
+@use './styles/partials/mixins' as *;
+
+.desktop{
+    @include desktop{
+        width: 94%;
+  
+    }
+
+}
+
+.row {
+
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        max-width: 63.75rem;
+        margin: 0 auto;
+    }
+
+}
+
