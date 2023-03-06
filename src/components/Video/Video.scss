@@ -1,0 +1,23 @@
+@use "../../styles/partials/resets";
+@use '../../styles/partials/mixins' as *;
+
+.video {
+    width:100%;
+    background-color: black;
+    margin-top: 1.5rem;
+    &__player{
+        width:100%;
+        height:100%;
+        margin:0;
+        @include desktop{
+            max-width:53rem;
+        }
+    }
+    @include tablet{
+        padding: 0 2.25rem;
+        margin-top: 0.3rem;
+    }
+    @include desktop {
+        text-align: center;
+    }
+}
