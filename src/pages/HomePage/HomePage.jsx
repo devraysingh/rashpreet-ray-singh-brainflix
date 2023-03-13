@@ -27,7 +27,6 @@ const HomePage = () => {
       const { data } = await axios.get(
         "https://project-2-api.herokuapp.com/videos?api_key=f96ddda2-569e-457b-93d2-98d6add59252"
       );
-      console.log(data);
       setVideoLibrary(data);
     } catch (error) {
       console.log("Error 404" + error);
@@ -40,9 +39,7 @@ const HomePage = () => {
         const { data } = await axios.get(
           `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=f96ddda2-569e-457b-93d2-98d6add59252`
         );
-        console.log(data);
         setVideo(data);
-        console.log(data.comments);
         scroll()
       }
     } catch (error) {
