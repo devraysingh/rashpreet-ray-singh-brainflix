@@ -1,0 +1,38 @@
+@use "../../styles/partials/resets";
+@use '../../styles/partials/mixins' as *;
+
+.upload-success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    padding: 0 1rem;
+    text-align: center;
+    @include tablet{
+        padding: 0 2.25rem;
+    }
+    @include desktop{
+        max-width: 63.75rem;
+        margin: 10rem auto;
+    }
+  
+    &__emoji {
+        font-size: 6.5rem;
+        margin: 1rem;
+        @include tablet{
+            font-size: 8rem;
+    }
+    }
+  
+    &__message {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    &__redirect {
+        font-size: 1.3rem;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+} 

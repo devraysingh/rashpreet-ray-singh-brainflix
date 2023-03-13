@@ -1,0 +1,43 @@
+@use "../../styles/partials/resets";
+@use '../../styles/partials/mixins' as *;
+
+.not-found-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    padding: 5rem;
+    background-color: #F5F5F5;
+    &__title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #0095FF;
+        @include tablet{
+            font-size: 5rem;
+        }
+    }
+    &__text {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 1.2rem;
+        @include tablet{
+            font-size: 2rem;
+        }
+    }
+    &__link {
+        font-size: 1rem;
+        color: #0095FF;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }&:active {
+            cursor: pointer;
+        }
+        @include tablet{
+            font-size: 2rem;
+        }
+    }
+}
