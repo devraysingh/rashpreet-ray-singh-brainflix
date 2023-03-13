@@ -33,7 +33,7 @@ const VideoUploadPage = () => {
         </div>
         <div className="upload-form__btn-container">
           <button className="upload-form__btn-submit" >PUBLISH</button>
-          <button className="upload-form__btn-cancel">CANCEL</button>
+          <button className="upload-form__btn-cancel" onClick={() => navigate('/', { replace: true })}>CANCEL</button>
         </div> 
       </form>
     
