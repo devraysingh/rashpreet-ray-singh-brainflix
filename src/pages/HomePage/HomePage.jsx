@@ -1,4 +1,3 @@
-
 import "./HomePage.scss";
 import Video from "../../components/Video/Video";
 import VideoDescription from "../../components/VideoDescription/VideoDescription";
@@ -22,7 +21,7 @@ const HomePage = () => {
       top: 0,
       behavior: "smooth"})
   };
-  //useEffect is call back hook for when video state changes for scroll top animation
+  //Function Fetch Video Library
   const fetchLibrary = async () => {
     try {
       const { data } = await axios.get(
@@ -31,10 +30,10 @@ const HomePage = () => {
       console.log(data);
       setVideoLibrary(data);
     } catch (error) {
-      console.log(error);
+      console.log("Error 404" + error);
     }
   };
-
+  //Function Fetch Video Details given a Id
   const fetchVideo = async (videoId) => {
     try {
       if (videoId !== "") {
@@ -47,10 +46,10 @@ const HomePage = () => {
         scroll()
       }
     } catch (error) {
-      console.log(error);
+      console.log("Error 404" + error);
     }
   };
-
+  //UseEffect Function 
   useEffect(() => {
     if(videoLibrary.length === 0){
         fetchLibrary();

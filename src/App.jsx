@@ -10,7 +10,7 @@ function App() {
   //React re-rendering the app
   return (
     <div className="App">
-      {/* App Child Components for the App */}
+      {/* App Routes */}
       <BrowserRouter>
         <Header />
         <Routes>
