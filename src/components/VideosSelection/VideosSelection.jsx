@@ -1,9 +1,9 @@
 import "./VideosSelection.scss";
-import VideoCard from "./VideoCard";
+import VideoCard from "../VideoCard/VideoCard";
 
-const  VideosSelection = (props) => {
+const  VideosSelection = ({data}) => {
 
-    const videoCards = props.data.map((videoCard, i) => {
+    const videoCards = data.map((videoCard, i) => {
         return (
             <VideoCard
                 key={videoCard.id}
@@ -11,7 +11,6 @@ const  VideosSelection = (props) => {
                 author={videoCard.channel}
                 title={videoCard.title}
                 image={videoCard.image}
-                handleVideo={props.handleVideo}
             />
         );
     });

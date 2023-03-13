@@ -1,18 +1,27 @@
 import "./Header.scss";
 import brainFlixLogo from "../../assets/images/logo/BrainFlix-logo.svg";
+import { Link } from "react-router-dom";
 
-function Header(){
-    //Header Component
-    return(
-        <div className="header">
-            <img src={brainFlixLogo} className="header__logo" alt="Brain Flix Nav Logo"></img>
-            <div className="header__actions">
-                <input placeholder="Search" className="header__search"></input>
-                <button className="header__upload-btn">UPLOAD</button>
-                <div className="header__user"></div>
-            </div>
+function Header() {
+  //Header Component
+  return (
+    <div className="border-bottom" >
+      <div className="header">
+        <Link to="/" className="header__logo">
+          <img src={brainFlixLogo} alt="Brain Flix Nav Logo"></img>
+        </Link>
+
+        <div className="header__actions">
+          <div placeholder="Search" className="header__search">Search</div>
+          <Link to={"/upload"} className="header__upload-link">
+            UPLOAD
+          </Link>
+
+          <div className="header__user"></div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
 export default Header;

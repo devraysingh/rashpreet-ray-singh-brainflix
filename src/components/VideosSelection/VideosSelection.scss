@@ -1,18 +1,21 @@
 @use "../../styles/partials/resets";
 @use '../../styles/partials/mixins' as *;
 
-.videos-selection{
+.videos-selection {
     margin-top: 2rem;
     margin-bottom: 1rem;
     padding: 0rem 0.75rem;
+
     @include tablet {
         padding: 0 2.25rem;
         margin-bottom: 3rem;
     }
-    &__title{
-        color:#AFAFAF;
+
+    &__title {
+        color: #AFAFAF;
         margin-bottom: 0.75rem;
         font-size: .8125rem;
+
         @include desktop {
             margin-top: 2rem;
             font-size: .875rem;

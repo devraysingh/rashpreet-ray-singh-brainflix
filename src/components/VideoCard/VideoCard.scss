@@ -1,7 +1,5 @@
-
 @use "../../styles/partials/resets";
 @use '../../styles/partials/mixins' as *;
-
 
 .video-card {
   display: flex;
@@ -22,6 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
+    height: 4.5rem;
     @include tablet {
         max-width: 11rem;
     }

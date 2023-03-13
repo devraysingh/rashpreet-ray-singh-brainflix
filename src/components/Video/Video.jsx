@@ -1,10 +1,10 @@
 import "./Video.scss"
 //Video Component 
-function Video(props){
+function Video({data}){
     return(
         //Returning a Video Container, with Video Player with in it.
         <div className="video">
-            <video className="video__player" poster={props.data.image} controls></video>
+            <video className="video__player" poster={data.image} controls></video>
         </div>
     );
 };
