@@ -8,7 +8,7 @@ const VideoUploadPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    navigate('/uploaded', { replace: true })
   }
 
 
@@ -16,7 +16,7 @@ const VideoUploadPage = () => {
   return (
     <div className="upload-form__container">
       <h1 className="upload-form__title">Upload Video</h1>
-      <form className="upload-form" onSubmit={() => navigate('/uploaded', { replace: true })}>
+      <form className="upload-form" onSubmit={handleSubmit}>
         <div className="upload-form__img-container">
           <label className="upload-form__img-label" htmlFor="thumbnail">VIDEO THUMBNAIL</label>
           <img className="upload-form__img" src={logo} alt="" name="thumbnail"/>
