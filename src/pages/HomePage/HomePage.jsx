@@ -24,10 +24,10 @@ const HomePage = () => {
   //Function Fetch Video Library
   const fetchLibrary = async () => {
     try {
-      const { data } = await axios.get(
-        "https://project-2-api.herokuapp.com/videos?api_key=f96ddda2-569e-457b-93d2-98d6add59252"
+      const { data } = await axios.get("http://localhost:8080/videos"
       );
       setVideoLibrary(data);
+      console.log(data);
     } catch (error) {
       console.log("Error 404" + error);
     }
@@ -37,13 +37,13 @@ const HomePage = () => {
     try {
       if (videoId !== "") {
         const { data } = await axios.get(
-          `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=f96ddda2-569e-457b-93d2-98d6add59252`
+          `http://localhost:8080/videos/${videoId}/`
         );
         setVideo(data);
         scroll()
       }
     } catch (error) {
-      console.log("Error 404" + error);
+      console.log("Error 404 hhh" + error);
     }
   };
   //UseEffect Function 
