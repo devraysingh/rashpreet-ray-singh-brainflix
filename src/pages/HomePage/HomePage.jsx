@@ -29,7 +29,7 @@ const HomePage = () => {
       setVideoLibrary(data);
       console.log(data);
     } catch (error) {
-      console.log("Error 404" + error);
+      console.log("Video Library Fetch Error:" + error);
     }
   };
   //Function Fetch Video Details given a Id
@@ -43,7 +43,7 @@ const HomePage = () => {
         scroll()
       }
     } catch (error) {
-      console.log("Error 404 hhh" + error);
+      console.log("Video Fetch Error" + error);
     }
   };
   //UseEffect Function 

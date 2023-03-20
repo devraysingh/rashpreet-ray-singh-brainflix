@@ -6,7 +6,7 @@ const  VideosSelection = ({data}) => {
     const videoCards = data.map((videoCard, i) => {
         return (
             <VideoCard
-                key={videoCard.id}
+                key={i}
                 id={videoCard.id}
                 author={videoCard.channel}
                 title={videoCard.title}
