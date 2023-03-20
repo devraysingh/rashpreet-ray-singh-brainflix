@@ -4,9 +4,11 @@ import logo from "../../assets/images/images/upload-video-preview.jpg"
 import "./UploadForm.scss"
 
 export default function UploadForm({ handleSubmit }) {
+    //Instance of useNavigate for Cancel Button
     const navigate = useNavigate();
 
     return (
+        //Form JSX Component
         <form className="upload-form" onSubmit={handleSubmit}>
             <div className="upload-form__img-container">
                 <label className="upload-form__img-label" htmlFor="thumbnail">VIDEO THUMBNAIL</label>

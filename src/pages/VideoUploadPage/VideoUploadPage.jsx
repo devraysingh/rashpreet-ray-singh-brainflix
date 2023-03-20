@@ -6,6 +6,7 @@ import UploadForm from "../../components/UploadForm/UploadForm";
 const VideoUploadPage = () => {
   const navigate = useNavigate();
 
+  //Asnyc Post Function to API Backend
   const postVideo = async (e) => {
     try {
         await axios.post("http://localhost:8080/videos", {
@@ -16,13 +17,14 @@ const VideoUploadPage = () => {
       console.log("Video Upload Post Error:" + error);
     }
   };
-
+  //Handle Submit Function
   const handleSubmit = (e) => {
     e.preventDefault();
     postVideo(e)
     navigate('/uploaded', { replace: true })
   }
 
+  //UploadPage JSX
   return (
     <div className="upload-form__container">
       <h1 className="upload-form__title">Upload Video</h1>

@@ -46,7 +46,7 @@ const HomePage = () => {
       console.log("Video Fetch Error" + error);
     }
   };
-  //UseEffect Function 
+  //useEffect Function 
   useEffect(() => {
     if(videoLibrary.length === 0){
         fetchLibrary();
@@ -55,7 +55,7 @@ const HomePage = () => {
     }
   }, [videoLibrary, selectedId]);
 
-
+  //HomePage JSX
   return (
     (video === null) ? <LoadingMessage/> : ( 
       <>

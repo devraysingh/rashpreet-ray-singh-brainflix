@@ -5,15 +5,17 @@ import "./UploadSuccessPage.scss"
 function UploadSuccessPage() {
     const navigate = useNavigate();
 
+    //useEffect to Redirect to home 
     useEffect(() => {
     const timer = setTimeout(() => {
     
-       navigate("/");
+        navigate("/");
     }, 2000);
 
         return () => clearTimeout(timer);
     }, [navigate]);
 
+    //JSX 
     return (
         <div className="upload-success">
             <h1 className="upload-success__emoji">✅</h1>

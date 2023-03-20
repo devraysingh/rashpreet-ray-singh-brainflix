@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import "./NotFoundPage.scss"
 
 function NotFoundPage() {
+  //NotFoundPage JSX
   return (
     <div className="not-found-page">
       <h1 className="not-found-page__title">Error: 404</h1>
